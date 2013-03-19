@@ -1,0 +1,18 @@
+{
+  "name": "ToDoApplication",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.1.0",
+    "jade": "*",
+    "less-middleware": "*",
+    "mongoose": "3.6.0"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
+  }
+}
