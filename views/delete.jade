@@ -1,12 +1,13 @@
 h1 Which Task is Complete?
 
-p Input entire name of task into box below to delete from list
-p [Case - sensitive]
+h2 Current List:
 
 ul
   each item in items
     li #{item.name}
 
+p Input entire name of task into box below to delete from list
+p [Case-sensitive]
 
 form(method="POST", action="/ToDo/kill")
   input(type="hidden", name="_method", value="DELETE")
