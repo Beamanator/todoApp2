@@ -8,5 +8,6 @@ ul
 
 
 form(method="POST", action="/ToDo/kill")
+  input(type="hidden", name="_method", value="DELETE")
   input#name(type="text", name="name")
   button(type="submit") Check er Off!
