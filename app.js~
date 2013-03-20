@@ -58,12 +58,17 @@ app.get('/ToDo/addTask', function(req, res){
 // CREATE
 app.post('/ToDo', function(req, res){
 	var b = req.body;
-	new Items({
-		name: b.name
-	}).save(function(err, item){
-		if (err) res.json(err);
+	if (b.name !== null || b.name !== ""){
+		new Items({
+			name: b.name
+		}).save(function(err, item){
+			if (err) res.json(err);
+			res.redirect('/ToDo/');
+		});
+	} else {
 		res.redirect('/ToDo/');
-	});
+	}
+
 });
 
 app.param('name', function(req, res, next, name){

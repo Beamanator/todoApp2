@@ -58,7 +58,7 @@ app.get('/ToDo/addTask', function(req, res){
 // CREATE
 app.post('/ToDo', function(req, res){
 	var b = req.body;
-	if (b.name !== null || b.name !== ""){
+	if (b.name !== null && b.name !== ""){
 		new Items({
 			name: b.name
 		}).save(function(err, item){
