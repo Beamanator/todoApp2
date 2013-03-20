@@ -3,4 +3,7 @@ h1 Add Task For To Do List!
 form(method="POST", action="/ToDo")
   p Task:
     input#name(type="text", name="name")
-  p: button(typde="submit") Add to List
+  p: button(type="submit") Add to List
+
+form(action="/ToDo")
+  p: button(type="submit") Nevermind
